@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: hsl(225, 89%, 14%);
+}
+
+.logo {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+
+
+.nav-links button {
+    padding: 6px 12px;
+    border: none;
+    background-color: #ffcc00;
+    color: #1e3a8a;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nav-links button:hover {
+    background-color: #ffd633;
+}
+.contact-section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.contact-form{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-form label{
+    display:block;
+    text-align:left;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+.contact-form button{
+    margin-top:20px;
+    padding:10px;
+    width:100%;
+    background-color:#1e3a8a;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.contact-form button:hover{
+    background-color:#0d2a6d;
+}
+
+</style>
+
+</head>
+
+<body>
+<nav class="navbar">
+
+<div class="logo">Travel</div>
+
+<div class="nav-links">
+<a href="Tourism.html">Home</a>
+<a href="destinations.html">Destinations</a>
+<a href="packages.html">Packages</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</nav>
+
+<section class="contact-section">
+
+<h2>Contact Us</h2>
+
+<form class="contact-form" id="contactForm">
+
+<label>Name</label>
+<input type="text" id="name" placeholder="Enter your name">
+
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter your email">
+
+<label>Message</label>
+<textarea id="message" rows="4" placeholder="Write your message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</section>
+<footer class="footer">
+<p>© 2026 Travel Website</p>
+</footer>
+
+<script>
+
+document.getElementById("contactForm").addEventListener("submit", function(event){
+
+event.preventDefault();
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let message = document.getElementById("message").value;
+
+if(name === "" || email === "" || message === ""){
+alert("Please fill all fields");
+}
+else{
+alert("Message sent successfully!");
+this.reset();
+}
+
+});
+
+</script>
+
+</body>
+</html>
